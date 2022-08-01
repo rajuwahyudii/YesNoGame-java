@@ -9,8 +9,8 @@ public class Game {
 
     public static void main(String[] args) {
         loadTree();
-        System.out.println("Let's play a game! I know " + tree.countAnimals() + " animals!");
-        System.out.println("You think of an animal, and I have to find out which one it is!");
+        System.out.println("Let's play a game! I know " + tree.countAnimals() + " youtuber");
+        System.out.println("You think of a youtuber, and I have to find out which one it is!");
         mainLoop();
     }
     private static void loadTree() {
@@ -30,7 +30,7 @@ public class Game {
     }
     private static void createTree() {
         tree = new QuestionTree();
-        tree.setRoot(new QuestionNode("Is it a mammal?"));
+        tree.setRoot(new QuestionNode("Is it a girl ?"));
         tree.setCurrent(tree.getRoot());
     }
     private static void saveTree() {
@@ -81,7 +81,7 @@ public class Game {
             if (tree.getCurrent().getNoNode() != null && !switchFlag)
                 tree.setCurrent(tree.getCurrent().getNoNode());
             else {
-                System.out.println("Really? I have no idea then!\nWhat animal was it?");
+                System.out.println("Really? I have no idea then!\nWho is that youtuber?");
                 var animalString = inputPrompt();
                 System.out.println("Please enter a yes/no question for " + animalString + ":");
                 var questionString = inputPrompt();
